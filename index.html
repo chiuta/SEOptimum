@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; connect-src *; frame-ancestors 'none'; base-uri 'none'; object-src 'none'">
 <title>SEOptimum — offline SEO workbench</title>
-<meta name="description" content="SEOptimum: a complete offline, single-file SEO toolkit — on-page audit, SERP &amp; social preview, schema generator, technical SEO files, readability, and more. Vanilla JS, zero telemetry, nothing leaves your browser.">
+<meta name="description" content="SEOptimum: a complete offline, single-file SEO toolkit — on-page audit, SERP &amp; social preview, schema generator, technical SEO files, readability, and more. Vanilla JS, zero telemetry; your text stays in the browser (network only if you use Fetch URL or a remote image preview).">
 <style>
 /* ============ TOKENS ============ */
 :root{
@@ -475,7 +475,7 @@ hr.rule{border:none; border-top:1px solid var(--border-soft); margin:22px 0}
         <button class="pill" data-lang="en">EN</button>
         <button class="pill" data-lang="ro">RO</button>
       </div>
-      <div class="privacy-note"><span class="dot-live"></span><span data-i18n="nav.privacy">Runs entirely in this tab. No network calls, no accounts, no analytics.</span></div>
+      <div class="privacy-note"><span class="dot-live"></span><span data-i18n="nav.privacy">Analysis runs in this tab. Network only when you click Fetch URL or preview a remote image. No accounts, no analytics.</span></div>
     </div>
 
   </aside>
@@ -487,7 +487,7 @@ hr.rule{border:none; border-top:1px solid var(--border-soft); margin:22px 0}
           <div>
             <div class="hero-kicker" data-i18n="home.kicker">what search engines actually read</div>
             <h1 data-i18n-html="home.title">Read your page the way a crawler does —<br><em>then fix what it finds.</em></h1>
-            <p class="hero-desc" data-i18n="home.desc">Thirteen tools for on-page audits, structured data, technical files and content checks. One HTML file, no server, no account, no tracking — open it anywhere and it works the same.</p>
+            <p class="hero-desc" data-i18n="home.desc">Twenty tools for on-page audits, structured data, technical files and content checks. One HTML file, no server, no account, no tracking — open it anywhere and it works the same.</p>
             <div class="btn-row">
               <button class="btn btn-primary" data-goto="onpage" data-i18n="home.cta1">Analyze a page</button>
               <button class="btn" data-goto="reference" data-i18n="home.cta2">Browse the cheat-sheet</button>
@@ -1363,6 +1363,7 @@ function cosineSimilarity(a, b) {
 const _pxCanvas = document.createElement('canvas');
 const _pxCtx = _pxCanvas.getContext('2d');
 function pixelWidth(text, font) {
+  if (!_pxCtx) { const m = /(\d+(?:\.\d+)?)px/.exec(font || '18px'); return (text || '').length * (m ? +m[1] : 18) * 0.5; } // canvas blocked: rough estimate
   _pxCtx.font = font || '18px arial';
   return _pxCtx.measureText(text || '').width;
 }
@@ -1375,7 +1376,7 @@ const EN_STRINGS = {
   'nav.home': 'home', 'nav.onpage': 'on-page', 'nav.serp': 'serp+social', 'nav.meta': 'meta-tags',
   'nav.schema': 'schema', 'nav.keywords': 'keywords', 'nav.readability': 'readability', 'nav.technical': 'technical',
   'nav.structure': 'structure', 'nav.duplicate': 'duplicate', 'nav.slug': 'slug', 'nav.checklist': 'checklist',
-  'nav.reference': 'reference', 'nav.privacy': 'Runs entirely in this tab. No network calls, no accounts, no analytics.',
+  'nav.reference': 'reference', 'nav.privacy': 'Analysis runs in this tab. Network only when you click Fetch URL or preview a remote image. No accounts, no analytics.',
   'theme.scan': 'dark', 'theme.report': 'light',
   'common.copy': 'Copy', 'common.copied': 'Copied', 'common.copyFailed': "Couldn't copy — select and copy manually",
   'common.pageTitle': 'Page title', 'common.pageUrl': 'Page URL', 'common.metaDesc': 'Meta description',
@@ -1384,7 +1385,7 @@ const EN_STRINGS = {
 
   'home.kicker': 'what search engines actually read',
   'home.title': 'Read your page the way a crawler does —<br><em>then fix what it finds.</em>',
-  'home.desc': 'Nineteen tools for on-page audits, structured data, technical files, keyword research, competitive comparison, and local & accessibility checks. One HTML file, no server, no account, no tracking — open it anywhere and it works the same.',
+  'home.desc': 'Twenty tools for on-page audits, structured data, technical files, keyword research, competitive comparison, and local & accessibility checks. One HTML file, no server, no account, no tracking — open it anywhere and it works the same.',
   'home.cta1': 'Analyze a page', 'home.cta2': 'Browse the cheat-sheet',
   'home.demoLabel': 'what the on-page analyzer flags',
   'home.demoFlagH1': '2nd h1', 'home.demoFlagAlt': 'no alt',
@@ -1554,6 +1555,7 @@ const EN_STRINGS = {
   'robots.checkOk': 'No structural problems found.', 'robots.checkBlocksAll': 'Disallow: / under User-agent: * blocks the entire site from this crawler.',
   'robots.checkHasSitemap': 'Sitemap directive found.', 'robots.checkNoSitemap': 'No Sitemap directive — optional, but useful.',
   'robots.checkOrphanDirective': 'Line {n} appears before any User-agent line and will be ignored: "{line}"',
+  'robots.checkNonStd': 'Line {n}: "{d}" is not supported by Google (noindex in robots.txt ignored since 2019; host is Yandex-only).',
   'robots.checkUnknownDirective': 'Line {n} — unrecognized directive: "{line}"', 'robots.checkGroupCount': 'User-agent groups: {n}',
   'sitemap.checkWellFormed': 'Well-formed XML.', 'sitemap.checkNotWellFormed': 'Not well-formed XML — parse error.',
   'sitemap.checkRootUrlset': 'Root element is <urlset> — valid per the sitemaps.org schema.',
@@ -1802,7 +1804,7 @@ const RO_STRINGS = {
   'nav.home': 'acasă', 'nav.onpage': 'on-page', 'nav.serp': 'serp+social', 'nav.meta': 'meta-tags',
   'nav.schema': 'schema', 'nav.keywords': 'cuvinte-cheie', 'nav.readability': 'lizibilitate', 'nav.technical': 'tehnic',
   'nav.structure': 'structură', 'nav.duplicate': 'duplicate', 'nav.slug': 'slug', 'nav.checklist': 'checklist',
-  'nav.reference': 'referință', 'nav.privacy': 'Rulează integral în acest tab. Fără apeluri de rețea, fără cont, fără analiză a traficului.',
+  'nav.reference': 'referință', 'nav.privacy': 'Analiza rulează în acest tab. Rețea doar când apeși Fetch URL sau previzualizezi o imagine externă. Fără cont, fără analiză a traficului.',
   'theme.scan': 'dark', 'theme.report': 'light',
   'common.copy': 'Copiază', 'common.copied': 'Copiat', 'common.copyFailed': 'Nu s-a putut copia — selectează și copiază manual',
   'common.pageTitle': 'Titlul paginii', 'common.pageUrl': 'URL-ul paginii', 'common.metaDesc': 'Meta description',
@@ -1811,7 +1813,7 @@ const RO_STRINGS = {
 
   'home.kicker': 'ce citește de fapt un motor de căutare',
   'home.title': 'Citește pagina așa cum o citește un crawler —<br><em>apoi repară ce găsești.</em>',
-  'home.desc': 'Nouăsprezece unelte pentru audit on-page, date structurate, fișiere tehnice, cercetare de cuvinte-cheie, comparație competitivă și verificări locale și de accesibilitate. Un singur fișier HTML, fără server, fără cont, fără urmărire — funcționează identic oriunde îl deschizi.',
+  'home.desc': 'Douăzeci de unelte pentru audit on-page, date structurate, fișiere tehnice, cercetare de cuvinte-cheie, comparație competitivă și verificări locale și de accesibilitate. Un singur fișier HTML, fără server, fără cont, fără urmărire — funcționează identic oriunde îl deschizi.',
   'home.cta1': 'Analizează o pagină', 'home.cta2': 'Vezi fișa de referință',
   'home.demoLabel': 'ce semnalează analizorul on-page',
   'home.demoFlagH1': 'al 2-lea h1', 'home.demoFlagAlt': 'fără alt',
@@ -1981,6 +1983,7 @@ const RO_STRINGS = {
   'robots.checkOk': 'Nicio problemă de structură găsită.', 'robots.checkBlocksAll': 'Disallow: / sub User-agent: * blochează întregul site pentru acest crawler.',
   'robots.checkHasSitemap': 'Directivă Sitemap găsită.', 'robots.checkNoSitemap': 'Nicio directivă Sitemap — opțională, dar utilă.',
   'robots.checkOrphanDirective': 'Linia {n} apare înaintea oricărei linii User-agent și va fi ignorată: "{line}"',
+  'robots.checkNonStd': 'Linia {n}: "{d}" nu este suportată de Google (noindex în robots.txt ignorat din 2019; host e doar Yandex).',
   'robots.checkUnknownDirective': 'Linia {n} — directivă nerecunoscută: "{line}"', 'robots.checkGroupCount': 'Grupuri User-agent: {n}',
   'sitemap.checkWellFormed': 'XML valid ca structură.', 'sitemap.checkNotWellFormed': 'XML invalid ca structură — eroare de parsare.',
   'sitemap.checkRootUrlset': 'Elementul rădăcină este <urlset> — valid conform schemei sitemaps.org.',
@@ -2658,6 +2661,7 @@ function renderOnPage(r, keyword) {
 function openPrintWindow(title, bodyHtml) {
   const w = window.open('', '_blank');
   if (!w) { toast(t('common.copyFailed')); return; }
+  try { w.opener = null; } catch (e) {}
   w.document.write(
     '<!doctype html><html><head><meta charset="utf-8"><title>' + escapeHtml(title) + '</title>' +
     '<style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:32px auto;padding:0 20px;color:#171a1e;line-height:1.5}' +
@@ -2796,7 +2800,7 @@ function renderSocialCards() {
   function buildCard(square) {
     const card = el('div', { class: 'social-card' + (square ? ' sc-square' : '') });
     const img = el('div', { class: 'sc-img' }, [imgUrl ? '' : t('serp.noImage')]);
-    if (imgUrl) img.style.backgroundImage = `url("${imgUrl.replace(/"/g, '')}")`;
+    if (imgUrl) img.style.backgroundImage = `url("${imgUrl.replace(/[\u0000-\u001f"'()\\\s]/g, c => '%' + c.charCodeAt(0).toString(16).padStart(2, '0'))}")`;
     const body = el('div', { class: 'sc-body' }, [
       el('div', { class: 'sc-domain' }, [site]),
       el('div', { class: 'sc-title' }, [title]),
@@ -3774,6 +3778,8 @@ function validateRobotsTxt(raw) {
     const directive = m[1].toLowerCase(), value = m[2].trim();
     if (!KNOWN.has(directive)) { results.push({ status: 'warn', label: t('robots.checkUnknownDirective', { n: idx + 1, line: rawLine.trim() }) }); return; }
     if (directive === 'user-agent') { if (!sawUserAgent || currentAgents._closed) { groupCount++; currentAgents = []; currentAgents._closed = false; } sawUserAgent = true; currentAgents.push(value); return; }
+    if (directive === 'sitemap') { hasSitemap = true; return; }
+    if (directive === 'noindex' || directive === 'host') { results.push({ status: 'warn', label: t('robots.checkNonStd', { n: idx + 1, d: directive }) }); }
     if (!sawUserAgent) { results.push({ status: 'warn', label: t('robots.checkOrphanDirective', { n: idx + 1, line: rawLine.trim() }) }); return; }
     currentAgents._closed = true;
     if (directive === 'sitemap') hasSitemap = true;
