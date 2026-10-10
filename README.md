@@ -46,6 +46,10 @@ Descarcă `index.html` și deschide-l în browser; funcționează fără interne
 
 Licența nu este încă declarată explicit în acest repository; vezi nota din aplicație (aplicația nu conține o declarație de licență proprie).
 
+## Audit
+
+Audit: 2026-10-10 — verificat cu Playwright și axe-core (WCAG 2.1 AA); corectate contrastul culorilor și depășirea orizontală pe ecran îngust. Notă: directiva `frame-ancestors` din meta CSP este ignorată de browsere (funcționează doar ca antet HTTP).
+
 ## Autor
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
