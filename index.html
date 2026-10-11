@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; connect-src *; base-uri 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-TGe5ap2wWla+WqGvkCfRa/tvcFPDBRcAOcHGxHZAIgA='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; connect-src *; base-uri 'none'; object-src 'none'; form-action 'none'">
 <title>SEOptimum — offline SEO workbench</title>
 <meta name="description" content="SEOptimum: a complete offline, single-file SEO toolkit — on-page audit, SERP &amp; social preview, schema generator, technical SEO files, readability, and more. Vanilla JS, zero telemetry; your text stays in the browser (network only if you use Fetch URL or a remote image preview).">
 <style>
@@ -527,7 +527,8 @@ hr.rule{border:none; border-top:1px solid var(--border-soft); margin:22px 0}
 
       <div class="field">
         <label data-i18n="onpage.htmlLabel">Page HTML source</label>
-        <textarea id="opHtml" rows="8" placeholder="<!doctype html>&#10;<html>…</html>" spellcheck="false"></textarea>
+        <textarea id="opHtml" rows="8" placeholder="<!doctype html>&#10;<html>…</html>" spellcheck="false" aria-describedby="opKbdHint"></textarea>
+        <p class="muted" id="opKbdHint" data-i18n="onpage.kbdHint" style="font-size:12.5px;margin:6px 0 0">Tip: Ctrl/Cmd+Enter inside the box runs the analysis.</p>
       </div>
 
       <div class="field">
@@ -1429,6 +1430,7 @@ const EN_STRINGS = {
   'onpage.imgTotal': '{n} images', 'onpage.imgMissingAlt': '{n} missing an alt attribute', 'onpage.imgEmptyAlt': '{n} with an empty alt (fine for decorative images)',
   'onpage.linkTotal': '{n} links total', 'onpage.linkInternal': '{n} internal', 'onpage.linkExternal': '{n} external', 'onpage.linkNofollow': '{n} nofollow', 'onpage.linkEmptyText': '{n} with empty/no anchor text',
   'onpage.noUrlForLinks': 'Add a page URL above to classify links as internal or external.',
+  'onpage.sdCheck': 'Check required fields in Schema tool →', 'onpage.kbdHint': 'Tip: Ctrl/Cmd+Enter inside the box runs the analysis.',
   'onpage.noJsonLd': 'No JSON-LD blocks found.', 'onpage.jsonLdValid': 'valid JSON', 'onpage.jsonLdInvalid': 'invalid JSON:',
   'onpage.noHreflang': 'No hreflang tags found.',
   'onpage.blockingScripts': '{n} render-blocking <script> in <head> (no async/defer)', 'onpage.blockingStyles': '{n} stylesheet <link> in <head>',
@@ -1857,6 +1859,7 @@ const RO_STRINGS = {
   'onpage.imgTotal': '{n} imagini', 'onpage.imgMissingAlt': '{n} fără atribut alt', 'onpage.imgEmptyAlt': '{n} cu alt gol (acceptabil pentru imagini decorative)',
   'onpage.linkTotal': '{n} linkuri în total', 'onpage.linkInternal': '{n} interne', 'onpage.linkExternal': '{n} externe', 'onpage.linkNofollow': '{n} nofollow', 'onpage.linkEmptyText': '{n} cu text de ancoră gol/lipsă',
   'onpage.noUrlForLinks': 'Adaugă un URL de pagină mai sus pentru a clasifica linkurile ca interne sau externe.',
+  'onpage.sdCheck': 'Verifică câmpurile obligatorii în unealta Schema →', 'onpage.kbdHint': 'Sfat: Ctrl/Cmd+Enter în câmp pornește analiza.',
   'onpage.noJsonLd': 'Niciun bloc JSON-LD găsit.', 'onpage.jsonLdValid': 'JSON valid', 'onpage.jsonLdInvalid': 'JSON invalid:',
   'onpage.noHreflang': 'Niciun tag hreflang găsit.',
   'onpage.blockingScripts': '{n} <script> blocante în <head> (fără async/defer)', 'onpage.blockingStyles': '{n} <link> de stylesheet în <head>',
@@ -2283,6 +2286,19 @@ function initSubtabs() {
     });
   });
 }
+// Ctrl/Cmd+Enter într-un câmp text apasă butonul principal cel mai apropiat (analizează / generează / verifică)
+function initRunShortcut() {
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' || !(e.ctrlKey || e.metaKey)) return;
+    const ta = e.target.closest && e.target.closest('textarea, input');
+    if (!ta) return;
+    for (let node = ta.parentElement; node && node !== document.body; node = node.parentElement) {
+      const btn = Array.from(node.querySelectorAll('.btn-primary')).find(b => !b.disabled && b.offsetParent !== null && !b.hasAttribute('data-copy-target'));
+      if (btn) { e.preventDefault(); btn.click(); return; }
+      if (node.matches('[data-panel]')) return;
+    }
+  });
+}
 function initCopyButtons() {
   document.addEventListener('click', e => {
     const btn = e.target.closest('[data-copy-target]');
@@ -2395,8 +2411,8 @@ function analyzePageHtml(htmlString, pageUrl) {
   getAllMetaByAttrPrefix(doc, 'name', 'twitter:').forEach(m => { r.twitter[m.getAttribute('name')] = m.getAttribute('content'); });
 
   r.jsonLd = $all('script[type="application/ld+json"]', doc).map(s => {
-    try { return { ok: true, data: JSON.parse(s.textContent) }; }
-    catch (e) { return { ok: false, error: e.message }; }
+    try { return { ok: true, data: JSON.parse(s.textContent), raw: s.textContent }; }
+    catch (e) { return { ok: false, error: e.message, raw: s.textContent }; }
   });
 
   r.hreflang = $all('link[rel]', doc).filter(l => (l.getAttribute('rel') || '').toLowerCase() === 'alternate' && l.hasAttribute('hreflang'))
@@ -2438,6 +2454,16 @@ function checkRow(status, label, detail) {
   row.appendChild(el('strong', { style: 'font-size:13.5px' }, [label]));
   if (detail) row.appendChild(el('span', { class: 'muted', style: 'font-size:12.5px' }, [detail]));
   return row;
+}
+// trimite un bloc JSON-LD găsit în pagină direct în validatorul din unealta Schema (fila Validate)
+function sdCheckBtn(raw) {
+  return el('button', { class: 'btn btn-ghost', type: 'button', style: 'padding:3px 10px;font-size:12px', onclick: () => {
+    gotoTool('schema');
+    const tab = $('.subtab[data-subtab="schemaValidate"]'); if (tab) tab.click();
+    $('#schValidateInput').value = String(raw || '').trim();
+    $('#schValidateBtn').click();
+    const res = $('#schValidateResults'); if (res && res.scrollIntoView) res.scrollIntoView({ block: 'nearest' });
+  } }, [t('onpage.sdCheck')]);
 }
 function scoreRing(pct) {
   pct = clamp(Number(pct) || 0, 0, 100);
@@ -2595,9 +2621,13 @@ function renderOnPage(r, keyword) {
   r.jsonLd.forEach(block => {
     if (block.ok) {
       const type = block.data && block.data['@type'] ? (Array.isArray(block.data['@type']) ? block.data['@type'].join(', ') : block.data['@type']) : '?';
-      sdCard.appendChild(checkRow('pass', type, t('onpage.jsonLdValid')));
+      const rowOk = checkRow('pass', type, t('onpage.jsonLdValid'));
+      rowOk.appendChild(sdCheckBtn(block.raw));
+      sdCard.appendChild(rowOk);
     } else {
-      sdCard.appendChild(checkRow('fail', t('onpage.jsonLdInvalid'), block.error));
+      const rowBad = checkRow('fail', t('onpage.jsonLdInvalid'), block.error);
+      rowBad.appendChild(sdCheckBtn(block.raw));
+      sdCard.appendChild(rowBad);
       checks.push({ status: 'fail' });
     }
   });
@@ -2670,9 +2700,10 @@ function openPrintWindow(title, bodyHtml) {
     'h1{font-size:22px} h2{font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:#565d63;border-bottom:1px solid #ddd;padding-bottom:6px;margin-top:28px}' +
     'table{width:100%;border-collapse:collapse;font-size:13px} td,th{padding:6px 8px;border-bottom:1px solid #e3e5e2;text-align:left}' +
     '.b-pass{color:#1a9556} .b-warn{color:#a06a06} .b-fail{color:#c22730} code{font-family:ui-monospace,monospace;font-size:12.5px}' +
-    '</style></head><body>' + bodyHtml + '<script>window.onload=()=>window.print()<' + '/script></body></html>'
+    '</style></head><body>' + bodyHtml + '</body></html>'
   );
   w.document.close();
+  setTimeout(() => { try { w.focus(); w.print(); } catch (e) {} }, 350);
 }
 function onPageReportHtml(r, keyword) {
   const rows = (label, status, detail) => `<tr><td class="b-${status}">${status.toUpperCase()}</td><td>${escapeHtml(label)}</td><td>${escapeHtml(detail || '')}</td></tr>`;
@@ -5102,6 +5133,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSidebarToggle();
   initSubtabs();
   initCopyButtons();
+  initRunShortcut();
   initLangToggle();
 
   renderHomeGrid();

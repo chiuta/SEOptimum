@@ -21,6 +21,8 @@ Meniul conține 20 de unelte, grupate astfel:
 - **Off-page & local:** analizor de anchor text, verificator de consistență NAP.
 - **Utilities:** constructor UTM, verificator de contrast WCAG 2.2, validator GTIN / cod de bare (UPC-A, EAN-8, EAN-13, GTIN-14).
 - **Reference:** listă de verificare SEO (export Markdown) și fișă de referință.
+- **Verificare rapidă a datelor structurate:** în analizorul on-page, fiecare bloc JSON-LD găsit are butonul „Verifică câmpurile obligatorii în unealta Schema →”, care îl trimite în fila Validate și rulează validarea.
+- **Scurtătură de tastatură:** `Ctrl/Cmd+Enter` într-un câmp text apasă butonul principal cel mai apropiat (Analyze, Generate, Check etc.).
 - Export raport on-page (`on-page-report.md`) și tipărire.
 
 ## Manual de utilizare
@@ -39,6 +41,8 @@ Meniul conține 20 de unelte, grupate astfel:
 - **Stocare locală:** `localStorage`, chei cu prefixul `seoFF.` (limbă, temă, listă UTM salvată, starea checklist-ului).
 - **Rețea:** aplicația face cereri doar la acțiuni explicite ale utilizatorului: butonul „Try fetch” (`fetch` către URL-ul introdus de tine, către orice site) și previzualizarea unei imagini `og:image` indicate prin URL (browserul încarcă imaginea de la acel URL). Politica CSP din pagină permite aceste conexiuni (`connect-src *`, `img-src https: http:`). În rest, analiza are loc local; nu există CDN, fonturi externe sau analytics.
 - Domeniile `example.com`, `schema.org` etc. din cod apar ca exemple sau identificatori de vocabular, nu ca resurse încărcate.
+
+- **CSP:** scripturile sunt permise doar prin hash `sha256` (fără `'unsafe-inline'` pentru scripturi); fereastra de tipărire a raportului nu mai folosește script inline (tipărirea este pornită din fila principală). Stilurile inline rămân permise.
 
 ## Rulare locală / offline
 
@@ -66,4 +70,5 @@ SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/s
 
 ## Istoric / Changelog
 
+- **11 octombrie 2026** — CSP cu hash pentru script (fără `'unsafe-inline'` la `script-src`) și `form-action 'none'`; buton de verificare a blocurilor JSON-LD din analizorul on-page în validatorul Schema; scurtătura Ctrl/Cmd+Enter; eliminate două capturi rătăcite (`s_1280.png`, `s_360.png`); testat cu CSP activ (0 erori, axe-core 0 violări la 1280×800 și 360×740).
 - **11 octombrie 2026** — descriere Schema / JSON-LD (EN și RO): indică explicit fila „Validate / Validează” (descoperibilitate); nota despre boții AI menționează reverificarea din 11.10.2026; verificat cu Playwright și axe-core (0 violări la 1280×800 și 360×740, fără depășire orizontală). Aplicația nu are număr de versiune.
