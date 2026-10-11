@@ -2,6 +2,8 @@
 
 Atelier SEO într-un singur fișier HTML: douăzeci de unelte care rulează în browser.
 
+**Ultima actualizare:** 11 octombrie 2026
+
 **Live:** https://chiuta.github.io/SEOptimum/
 
 ![Captura de ecran](screenshot.png)
@@ -57,3 +59,11 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 ## English summary
 
 SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/social preview, meta and JSON-LD generators, keyword research, readability, robots/sitemap/hreflang/llms.txt, log analyzer, site audit, UTM builder, WCAG contrast, GTIN validator, checklist). English/Romanian UI. Analysis runs locally; the network is used only for the optional "Try fetch" button and remote og:image previews. Preferences are stored in localStorage (`seoFF.` keys).
+
+## Surse verificate la 11.10.2026
+
+- Lista de boți AI din fișa de referință (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended etc.) reverificată față de ghiduri publice din 2026 (de ex. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); numele coincid, dar comportamentul boților se schimbă — lista rămâne marcată ca perisabilă în aplicație.
+
+## Istoric / Changelog
+
+- **11 octombrie 2026** — descriere Schema / JSON-LD (EN și RO): indică explicit fila „Validate / Validează” (descoperibilitate); nota despre boții AI menționează reverificarea din 11.10.2026; verificat cu Playwright și axe-core (0 violări la 1280×800 și 360×740, fără depășire orizontală). Aplicația nu are număr de versiune.
