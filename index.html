@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-TGe5ap2wWla+WqGvkCfRa/tvcFPDBRcAOcHGxHZAIgA='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; connect-src *; base-uri 'none'; object-src 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Jc3CWMnzcuZl+Z5qluX8yfbjBQMPFNbZLj47xx328R8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; connect-src *; base-uri 'none'; object-src 'none'; form-action 'none'">
 <title>SEOptimum — offline SEO workbench</title>
 <meta name="description" content="SEOptimum: a complete offline, single-file SEO toolkit — on-page audit, SERP &amp; social preview, schema generator, technical SEO files, readability, and more. Vanilla JS, zero telemetry; your text stays in the browser (network only if you use Fetch URL or a remote image preview).">
 <style>
@@ -2383,6 +2383,12 @@ function analyzePageHtml(htmlString, pageUrl) {
 
   const charsetEl = $all('meta[charset]', doc)[0];
   r.charset = charsetEl ? charsetEl.getAttribute('charset') : null;
+  if (!r.charset) {
+    // forma veche: <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    const heq = $all('meta[http-equiv]', doc).find(m => (m.getAttribute('http-equiv') || '').toLowerCase() === 'content-type');
+    const cm = heq && /charset\s*=\s*([\w-]+)/i.exec(heq.getAttribute('content') || '');
+    if (cm) r.charset = cm[1];
+  }
 
   r.lang = doc.documentElement ? doc.documentElement.getAttribute('lang') : null;
 
