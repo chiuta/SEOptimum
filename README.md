@@ -48,7 +48,7 @@ Licența nu este încă declarată explicit în acest repository; vezi nota din 
 
 ## Audit
 
-Audit: 2026-10-10 — verificat cu Playwright și axe-core (WCAG 2.1 AA); corectate contrastul culorilor și depășirea orizontală pe ecran îngust. Notă: directiva `frame-ancestors` din meta CSP este ignorată de browsere (funcționează doar ca antet HTTP).
+Audit: 2026-10-10 — verificat cu Playwright și axe-core (WCAG 2.1 AA); corectate contrastul culorilor și depășirea orizontală pe ecran îngust. Directiva `frame-ancestors` a fost scoasă din meta CSP (browserele o ignoră în `<meta>`; funcționează doar ca antet HTTP, pe care GitHub Pages nu îl permite). `connect-src *` și `img-src https: http:` rămân intenționat largi, fiindcă „Try fetch” și previzualizarea `og:image` încarcă URL-uri arbitrare introduse de utilizator; nu pot fi restrânse fără a strica funcția.
 
 ## Autor
 
