@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Jc3CWMnzcuZl+Z5qluX8yfbjBQMPFNbZLj47xx328R8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; connect-src *; base-uri 'none'; object-src 'none'; form-action 'none'">
+<meta name="application-version" content="1.0.0">
+<meta name="last-updated" content="2026-10-12">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-mJtUIhK8QB9VM0mmElwYOk0kImI6eLNST58tYl7ivtE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; connect-src *; base-uri 'none'; object-src 'none'; form-action 'none'">
 <title>SEOptimum — offline SEO workbench</title>
 <meta name="description" content="SEOptimum: a complete offline, single-file SEO toolkit — on-page audit, SERP &amp; social preview, schema generator, technical SEO files, readability, and more. Vanilla JS, zero telemetry; your text stays in the browser (network only if you use Fetch URL or a remote image preview).">
 <style>
@@ -383,6 +385,7 @@ pre.code-out{
 .two-col{display:grid; grid-template-columns:1fr 1fr; gap:20px}
 @media (max-width:760px){.two-col{grid-template-columns:1fr}}
 hr.rule{border:none; border-top:1px solid var(--border-soft); margin:22px 0}
+.app-ver{margin-top:8px; font-size:12px; color:var(--text-3); font-family:var(--font-mono)}
 .footer-note{margin-top:48px; padding-top:18px; border-top:1px solid var(--border-soft); font-size:12px; color:var(--text-3); font-family:var(--font-mono)}
 [data-panel]{display:none}
 [data-panel].active{display:block}
@@ -510,6 +513,7 @@ hr.rule{border:none; border-top:1px solid var(--border-soft); margin:22px 0}
       <h2 class="section-title" data-i18n="home.allTools">all tools</h2>
       <div class="tool-grid" id="homeToolGrid"></div>
       <div class="footer-note" data-i18n="home.footer">Vanilla JS. No build step, no CDN, no external fonts. Works offline from disk once saved.</div>
+      <div class="app-ver"><span data-i18n="home.version">Version</span> <span id="app-version">v 1.0.0 · 2026-10-12</span></div>
     </section>
     <section data-panel="onpage">
       <div class="eyebrow" data-i18n="onpage.eyebrow">01 · on-page audit</div>
@@ -1394,6 +1398,7 @@ const EN_STRINGS = {
   'home.demoFlagH1': '2nd h1', 'home.demoFlagAlt': 'no alt',
   'home.allTools': 'all tools',
   'home.footer': 'Vanilla JS. No build step, no CDN, no external fonts. Works offline from disk once saved.',
+  'home.version': 'Version',
   'home.tool.onpage.name': 'On-page analyzer', 'home.tool.onpage.desc': 'Paste HTML, get a full audit',
   'home.tool.serp.name': 'SERP & social preview', 'home.tool.serp.desc': 'Google, OG and X card previews',
   'home.tool.meta.name': 'Meta tag generator', 'home.tool.meta.desc': 'A clean, ordered <head> block',
@@ -1823,6 +1828,7 @@ const RO_STRINGS = {
   'home.demoFlagH1': 'al 2-lea h1', 'home.demoFlagAlt': 'fără alt',
   'home.allTools': 'toate uneltele',
   'home.footer': 'Vanilla JS. Fără build, fără CDN, fără fonturi externe. Funcționează offline de pe disc odată salvat.',
+  'home.version': 'Versiune',
   'home.tool.onpage.name': 'Analizor on-page', 'home.tool.onpage.desc': 'Lipești HTML, primești un audit complet',
   'home.tool.serp.name': 'Previzualizare SERP & social', 'home.tool.serp.desc': 'Google, OG și carduri X',
   'home.tool.meta.name': 'Generator meta tags', 'home.tool.meta.desc': 'Un bloc <head> curat și ordonat',

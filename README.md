@@ -2,7 +2,7 @@
 
 Atelier SEO într-un singur fișier HTML: douăzeci de unelte care rulează în browser.
 
-**Ultima actualizare:** 11 octombrie 2026
+**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
 
 **Live:** https://chiuta.github.io/SEOptimum/
 
@@ -70,6 +70,7 @@ SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/s
 
 ## Istoric / Changelog
 
+- 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
 - **11 octombrie 2026** (runda 7) — analizorul on-page recunoaște și forma veche `<meta http-equiv="Content-Type" content="...; charset=...">` (înainte raporta fals „Charset not set”); lipsa totală a charset-ului rămâne avertisment (WARN), verificat cu două pagini de test; 0 erori, axe 0 violări la 1280×800 și 360×740.
 - **11 octombrie 2026** — CSP cu hash pentru script (fără `'unsafe-inline'` la `script-src`) și `form-action 'none'`; buton de verificare a blocurilor JSON-LD din analizorul on-page în validatorul Schema; scurtătura Ctrl/Cmd+Enter; eliminate două capturi rătăcite (`s_1280.png`, `s_360.png`); testat cu CSP activ (0 erori, axe-core 0 violări la 1280×800 și 360×740).
 - **11 octombrie 2026** — descriere Schema / JSON-LD (EN și RO): indică explicit fila „Validate / Validează” (descoperibilitate); nota despre boții AI menționează reverificarea din 11.10.2026; verificat cu Playwright și axe-core (0 violări la 1280×800 și 360×740, fără depășire orizontală). Aplicația nu are număr de versiune.
