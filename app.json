@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "slug": "seoptimum",
+  "name": "SEOptimum — offline SEO workbench",
+  "version": "1.1.0",
+  "updated": "2026-10-14",
+  "description": "SEOptimum: a complete offline, single-file SEO toolkit — on-page audit, SERP &amp; social preview, schema generator, technical SEO files, readability, and more. Vanilla JS, zero telemetry; your text stays in the browser (network only if you use Fetch URL or a remote image preview).",
+  "egress": [
+    {
+      "host": "*(orice gazdă)",
+      "via": [
+        "csp:connect-src"
+      ]
+    },
+    {
+      "host": "http:(orice gazdă)",
+      "via": [
+        "csp:img-src"
+      ]
+    },
+    {
+      "host": "https:(orice gazdă)",
+      "via": [
+        "csp:img-src"
+      ]
+    }
+  ],
+  "permissions": [
+    "clipboard",
+    "serviceWorker",
+    "localStorage"
+  ],
+  "storageKeys": [],
+  "sizeBytes": 438009,
+  "sha256": "ad2966dc3a89496e70f30c5dfef169f184fd2f790f506c62fac95b2b5eef5b36",
+  "csp": {
+    "present": true,
+    "directives": {
+      "default-src": "'self'",
+      "script-src": "'self' sha256×3",
+      "style-src": "'self' 'unsafe-inline'",
+      "img-src": "'self' data: blob: https: http:",
+      "connect-src": "*",
+      "base-uri": "'none'",
+      "object-src": "'none'",
+      "form-action": "'none'",
+      "manifest-src": "'self'",
+      "worker-src": "'self'"
+    },
+    "scriptInline": "hash",
+    "connect": "*"
+  },
+  "features": {
+    "export": true,
+    "import": true,
+    "i18n": [
+      "ro",
+      "en"
+    ],
+    "pwa": {
+      "manifest": true,
+      "serviceWorker": true
+    },
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "kit": {
+    "version": "1.0.0",
+    "modules": [
+      "core",
+      "label",
+      "bundle"
+    ]
+  },
+  "selfSerializing": false
+}

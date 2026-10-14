@@ -2,7 +2,7 @@
 
 Atelier SEO într-un singur fișier HTML: douăzeci de unelte care rulează în browser.
 
-**Versiune:** 1.0.0 · **Ultima actualizare:** 12 octombrie 2026
+**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
 
 **Live:** https://chiuta.github.io/SEOptimum/
 
@@ -69,6 +69,8 @@ SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/s
 - Lista de boți AI din fișa de referință (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended etc.) reverificată față de ghiduri publice din 2026 (de ex. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); numele coincid, dar comportamentul boților se schimbă — lista rămâne marcată ca perisabilă în aplicație.
 
 ## Istoric / Changelog
+
+- 1.1.0 — 2026-10-14: Copie de rezervă și etichetare date (fff-kit).
 
 - 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
 - **11 octombrie 2026** (runda 7) — analizorul on-page recunoaște și forma veche `<meta http-equiv="Content-Type" content="...; charset=...">` (înainte raporta fals „Charset not set”); lipsa totală a charset-ului rămâne avertisment (WARN), verificat cu două pagini de test; 0 erori, axe 0 violări la 1280×800 și 360×740.

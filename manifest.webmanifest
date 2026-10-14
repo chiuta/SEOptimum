@@ -1,0 +1,37 @@
+{
+  "name": "SEOptimum",
+  "short_name": "SEOptimum",
+  "description": "SEOptimum: a complete offline, single-file SEO toolkit — on-page audit, SERP & social preview, schema generator, technical SEO files, readability, and more. Vanilla JS, zero telemetry; your text stays in the browser (network only if you use Fetch URL or a remote image preview).",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "en",
+  "background_color": "#0d1015",
+  "theme_color": "#0d1015",
+  "categories": [
+    "utilities",
+    "productivity"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "x_fff_pwa": 1
+}
