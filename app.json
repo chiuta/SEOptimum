@@ -31,8 +31,8 @@
     "localStorage"
   ],
   "storageKeys": [],
-  "sizeBytes": 438009,
-  "sha256": "ad2966dc3a89496e70f30c5dfef169f184fd2f790f506c62fac95b2b5eef5b36",
+  "sizeBytes": 440563,
+  "sha256": "d660567c8748f56c5819cfec625e159e7ba529689c52c14d104ccac747b5a292",
   "csp": {
     "present": true,
     "directives": {
