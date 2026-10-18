@@ -2,7 +2,7 @@
 
 Atelier SEO într-un singur fișier HTML: douăzeci de unelte care rulează în browser.
 
-**Versiune:** 1.1.0 · **Ultima actualizare:** 14 octombrie 2026
+**Versiune:** 1.2.0 · **Ultima actualizare:** 18 octombrie 2026
 
 **Live:** https://chiuta.github.io/SEOptimum/
 
@@ -70,6 +70,7 @@ SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/s
 
 ## Istoric / Changelog
 
+- 1.2.0 — 2026-10-18: În „On-page”, link către ScryVeil cu domeniul din câmpul URL (doar link, fără cerere de rețea; ascuns pentru IP/localhost).
 - 1.1.0 — 2026-10-14: Copie de rezervă și etichetare date (fff-kit).
 
 - 1.0.0 — 2026-10-12: versiunea și data ultimei actualizări sunt afișate în aplicație
