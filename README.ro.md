@@ -64,9 +64,9 @@ Audit: 2026-10-10 — verificat cu Playwright și axe-core (WCAG 2.1 AA); corect
 
 Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
-## English summary
+## Rezumat
 
-SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/social preview, meta and JSON-LD generators, keyword research, readability, robots/sitemap/hreflang/llms.txt, log analyzer, site audit, UTM builder, WCAG contrast, GTIN validator, checklist). English/Romanian UI. Analysis runs locally; the network is used only for the optional "Try fetch" button and remote og:image previews. Preferences are stored in localStorage (`seoFF.` keys).
+SEOptimum este un atelier SEO într-un singur fișier cu 20 de instrumente (analizor on-page, previzualizare SERP/social, generatoare de meta și JSON-LD, cercetare de cuvinte-cheie, lizibilitate, robots/sitemap/hreflang/llms.txt, analizor de loguri, audit de site, constructor UTM, contrast WCAG, validator GTIN, listă de verificare). Interfață în engleză/română. Analiza rulează local; rețeaua se folosește doar pentru butonul opțional „Try fetch” și pentru previzualizările og:image la distanță. Preferințele se stochează în localStorage (chei `seoFF.`).
 
 ## Surse verificate la 11.10.2026
 
