@@ -10,7 +10,7 @@ Atelier SEO într-un singur fișier HTML: douăzeci de unelte care rulează în 
 
 **Live:** https://chiuta.github.io/SEOptimum/
 
-![Captura de ecran](screenshot.png)
+![Captura de ecran](screenshot.ro.png)
 
 ## Ce este
 

@@ -10,7 +10,7 @@ An SEO workshop in a single HTML file: twenty tools that run in the browser.
 
 **Live app:** https://chiuta.github.io/SEOptimum/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.en.png)
 
 ## What it is
 

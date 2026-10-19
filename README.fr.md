@@ -10,7 +10,7 @@ Atelier SEO dans un seul fichier HTML : vingt outils qui s'exécutent dans le na
 
 **Application en ligne :** https://chiuta.github.io/SEOptimum/
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](screenshot.fr.png)
 
 ## De quoi s'agit-il
 

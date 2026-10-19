@@ -10,7 +10,7 @@ Oficina SEO num único ficheiro HTML: vinte ferramentas que funcionam no navegad
 
 **Aplicação online:** https://chiuta.github.io/SEOptimum/
 
-![Captura de ecrã](screenshot.png)
+![Captura de ecrã](screenshot.pt.png)
 
 ## O que é
 

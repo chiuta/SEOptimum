@@ -10,7 +10,7 @@ Laboratorio SEO in un unico file HTML: venti strumenti che funzionano nel browse
 
 **App online:** https://chiuta.github.io/SEOptimum/
 
-![Schermata](screenshot.png)
+![Schermata](screenshot.it.png)
 
 ## Che cos'è
 

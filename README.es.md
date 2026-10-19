@@ -10,7 +10,7 @@ Taller SEO en un único archivo HTML: veinte herramientas que se ejecutan en el 
 
 **Aplicación en línea:** https://chiuta.github.io/SEOptimum/
 
-![Captura de pantalla](screenshot.png)
+![Captura de pantalla](screenshot.es.png)
 
 ## Qué es
 

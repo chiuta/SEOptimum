@@ -10,7 +10,7 @@ SEO-műhely egyetlen HTML-fájlban: húsz eszköz, amely a böngészőben fut.
 
 **Online alkalmazás:** https://chiuta.github.io/SEOptimum/
 
-![Képernyőkép](screenshot.png)
+![Képernyőkép](screenshot.hu.png)
 
 ## Mi ez
 

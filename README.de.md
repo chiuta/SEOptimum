@@ -10,7 +10,7 @@ SEO-Werkstatt in einer einzigen HTML-Datei: zwanzig Werkzeuge, die im Browser la
 
 **Live-App:** https://chiuta.github.io/SEOptimum/
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.de.png)
 
 ## Was es ist
 
