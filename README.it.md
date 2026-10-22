@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.3.4 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 1.3.5 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ SEOptimum è un laboratorio SEO in un unico file con 20 strumenti (analizzatore 
 - L'elenco dei bot di IA nella scheda di riferimento (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended ecc.) è stato ricontrollato rispetto a guide pubbliche del 2026 (ad es. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); i nomi coincidono, ma il comportamento dei bot cambia — l'elenco resta contrassegnato come deperibile nell'app.
 
 ## Cronologia / Changelog
+
+### 1.3.5 — 2026-10-22
+
+fff-kit 1.1.4: target touch e dimensione minima del testo.
 
 ### 1.3.4 — 2026-10-22
 - fff-kit 1.1.2: PBKDF2 con 600.000 iterazioni, protezione anti-clickjacking
