@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.3.6 · **Ultima actualizare:** 2026-10-23
+**Versiune:** 1.3.7 · **Ultima actualizare:** 2026-10-23
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ SEOptimum este un atelier SEO într-un singur fișier cu 20 de instrumente (anal
 - Lista de boți AI din fișa de referință (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended etc.) reverificată față de ghiduri publice din 2026 (de ex. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); numele coincid, dar comportamentul boților se schimbă — lista rămâne marcată ca perisabilă în aplicație.
 
 ## Istoric / Changelog
+
+### 1.3.7 — 2026-10-23
+
+- Dialogurile native `confirm()` au fost înlocuite cu `FFF.dialog` (accesibil, tradus; kit 1.2.0); comportamentul rămâne neschimbat.
 
 ### 1.3.5 — 2026-10-22
 

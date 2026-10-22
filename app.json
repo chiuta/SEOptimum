@@ -2,7 +2,7 @@
   "schema": 1,
   "slug": "seoptimum",
   "name": "SEOptimum — offline SEO workbench",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "updated": "2026-10-23",
   "description": "SEOptimum: a complete offline, single-file SEO toolkit — on-page audit, SERP &amp; social preview, schema generator, technical SEO files, readability, and more. Vanilla JS, zero telemetry; your text stays in the browser (network only if you use Fetch URL or a remote image preview).",
   "egress": [
@@ -31,8 +31,8 @@
     "localStorage"
   ],
   "storageKeys": [],
-  "sizeBytes": 841594,
-  "sha256": "391147cc0987967533e3001625f5e04a71eb2a27f48d651558b70f33a7d2ff97",
+  "sizeBytes": 841635,
+  "sha256": "b021c061807e02540e5778a10cfe2ba9356586c7cce51b0fe21b556afcd1a904",
   "csp": {
     "present": true,
     "directives": {
