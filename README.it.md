@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 1.3.2 · **Ultimo aggiornamento:** 2026-10-22
+**Versione:** 1.3.3 · **Ultimo aggiornamento:** 2026-10-22
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ SEOptimum è un laboratorio SEO in un unico file con 20 strumenti (analizzatore 
 - L'elenco dei bot di IA nella scheda di riferimento (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended ecc.) è stato ricontrollato rispetto a guide pubbliche del 2026 (ad es. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); i nomi coincidono, ma il comportamento dei bot cambia — l'elenco resta contrassegnato come deperibile nell'app.
 
 ## Cronologia / Changelog
+
+### 1.3.3 — 2026-10-22
+- Accessibilità: la pagina espone esattamente un titolo di livello 1 per vista (i titoli degli strumenti sono elementi di livello 2 annunciati come livello 1, l'aspetto resta invariato).
+- Mobile: tutto il testo piccolo arriva ad almeno 12 px; la demo della home non esce più da uno schermo di 360 px.
 
 ### 1.3.2 — 2026-10-22
 - Il segnaposto di esempio della scheda llms.txt («Running shoes and gear, tested by trail runners.») è ora tradotto in tutte le lingue dell’interfaccia.

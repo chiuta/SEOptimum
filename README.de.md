@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.3.2 · **Zuletzt aktualisiert:** 2026-10-22
+**Version:** 1.3.3 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ SEOptimum ist eine SEO-Werkstatt in einer einzigen Datei mit 20 Werkzeugen (On-P
 - Die Liste der KI-Bots im Referenzblatt (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended usw.) wurde anhand öffentlicher Leitfäden von 2026 erneut geprüft (z. B. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); die Namen stimmen überein, aber das Verhalten der Bots ändert sich — die Liste bleibt in der App als vergänglich gekennzeichnet.
 
 ## Verlauf / Changelog
+
+### 1.3.3 — 2026-10-22
+- Barrierefreiheit: Die Seite stellt pro Ansicht genau eine Überschrift der Ebene 1 bereit (die Werkzeugtitel sind H2-Elemente, die als Ebene 1 angekündigt werden; das Aussehen bleibt gleich).
+- Mobil: Aller kleine Text hat mindestens 12 px; die Demo auf der Startseite läuft nicht mehr über einen 360-px-Bildschirm hinaus.
 
 ### 1.3.2 — 2026-10-22
 - Der Beispiel-Platzhalter im Tab llms.txt („Running shoes and gear, tested by trail runners.“) ist jetzt in allen Oberflächensprachen übersetzt.
