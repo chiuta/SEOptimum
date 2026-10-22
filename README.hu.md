@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.3.0 · **Utolsó frissítés:** 2026-10-19
+**Verzió:** 1.3.1 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,9 @@ A SEOptimum egyetlen fájlból álló SEO-műhely 20 eszközzel (on-page elemző
 - A referencialapon szereplő MI-botok listáját (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended stb.) újra ellenőrizték 2026-os nyilvános útmutatókkal szemben (pl. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); a nevek egyeznek, de a botok viselkedése változik — a lista az alkalmazásban továbbra is múlandóként van megjelölve.
 
 ## Előzmények / Changelog
+
+### 1.3.1 — 2026-10-22
+- Fordítási javítások: az oldalcím és a meta címkék követik a felület nyelvét; a strukturált adatok (schema) űrlapjainak címkéi, helyőrzői és bemutató szövegei mind a 8 nyelven fordítva vannak.
 
 - 1.2.0 — 2026-10-18: Az „On-page” részben hivatkozás a ScryVeilre az URL-mezőben szereplő tartománnyal (csak hivatkozás, hálózati kérés nélkül; IP/localhost esetén rejtett).
 - 1.1.0 — 2026-10-14: Biztonsági mentés és adatcímkézés (fff-kit).

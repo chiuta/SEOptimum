@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.3.0 · **Last updated:** 2026-10-19
+**Version:** 1.3.1 · **Last updated:** 2026-10-22
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,9 @@ SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/s
 - The list of AI bots in the reference sheet (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, etc.) was re-checked against public guides from 2026 (e.g. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); the names match, but the bots' behaviour changes — the list remains marked as perishable in the app.
 
 ## History / Changelog
+
+### 1.3.1 — 2026-10-22
+- Translation fixes: page title and meta tags follow the interface language; structured-data (schema) form labels, placeholders and demo texts are now translated in all 8 languages.
 
 - 1.2.0 — 2026-10-18: In "On-page", a link to ScryVeil with the domain from the URL field (link only, no network request; hidden for IP/localhost).
 - 1.1.0 — 2026-10-14: Backup and data labelling (fff-kit).

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.3.0 · **Zuletzt aktualisiert:** 2026-10-19
+**Version:** 1.3.1 · **Zuletzt aktualisiert:** 2026-10-22
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,9 @@ SEOptimum ist eine SEO-Werkstatt in einer einzigen Datei mit 20 Werkzeugen (On-P
 - Die Liste der KI-Bots im Referenzblatt (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended usw.) wurde anhand öffentlicher Leitfäden von 2026 erneut geprüft (z. B. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); die Namen stimmen überein, aber das Verhalten der Bots ändert sich — die Liste bleibt in der App als vergänglich gekennzeichnet.
 
 ## Verlauf / Changelog
+
+### 1.3.1 — 2026-10-22
+- Übersetzungskorrekturen: Seitentitel und Meta-Tags folgen der Oberflächensprache; Beschriftungen, Platzhalter und Demotexte der Schema-Formulare (strukturierte Daten) sind in allen 8 Sprachen übersetzt.
 
 - 1.2.0 — 2026-10-18: Unter „On-page“ ein Link zu ScryVeil mit der Domain aus dem URL-Feld (nur Link, keine Netzwerkanfrage; für IP/localhost ausgeblendet).
 - 1.1.0 — 2026-10-14: Datensicherung und Datenkennzeichnung (fff-kit).
