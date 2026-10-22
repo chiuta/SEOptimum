@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 1.3.1 · **Utolsó frissítés:** 2026-10-22
+**Verzió:** 1.3.2 · **Utolsó frissítés:** 2026-10-22
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,9 @@ A SEOptimum egyetlen fájlból álló SEO-műhely 20 eszközzel (on-page elemző
 - A referencialapon szereplő MI-botok listáját (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended stb.) újra ellenőrizték 2026-os nyilvános útmutatókkal szemben (pl. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); a nevek egyeznek, de a botok viselkedése változik — a lista az alkalmazásban továbbra is múlandóként van megjelölve.
 
 ## Előzmények / Changelog
+
+### 1.3.2 — 2026-10-22
+- Az llms.txt fül példa-helyőrzője („Running shoes and gear, tested by trail runners.”) mostantól minden felületi nyelven le van fordítva.
 
 ### 1.3.1 — 2026-10-22
 - Fordítási javítások: az oldalcím és a meta címkék követik a felület nyelvét; a strukturált adatok (schema) űrlapjainak címkéi, helyőrzői és bemutató szövegei mind a 8 nyelven fordítva vannak.
