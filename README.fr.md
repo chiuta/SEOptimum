@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 1.3.3 · **Dernière mise à jour :** 2026-10-22
+**Version :** 1.3.4 · **Dernière mise à jour :** 2026-10-22
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,9 @@ SEOptimum est un atelier SEO dans un seul fichier avec 20 outils (analyseur on-p
 - La liste des robots d'IA de la fiche de référence (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, etc.) a été revérifiée par rapport à des guides publics de 2026 (par ex. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know) ; les noms coïncident, mais le comportement des robots change — la liste reste marquée comme périssable dans l'application.
 
 ## Historique / Changelog
+
+### 1.3.4 — 2026-10-22
+- fff-kit 1.1.2 : PBKDF2 à 600 000 itérations, protection anti-clickjacking
 
 ### 1.3.3 — 2026-10-22
 - Accessibilité : la page expose exactement un titre de niveau 1 par vue (les titres des outils sont des éléments de niveau 2 annoncés comme niveau 1, l'apparence est inchangée).
