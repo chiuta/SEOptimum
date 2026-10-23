@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 1.3.7 · **Última actualización:** 2026-10-23
+**Versión:** 1.3.8 · **Última actualización:** 2026-10-23
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,10 @@ SEOptimum es un taller SEO en un único archivo con 20 herramientas (analizador 
 - La lista de bots de IA de la ficha de referencia (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, etc.) se volvió a comprobar con guías públicas de 2026 (p. ej. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); los nombres coinciden, pero el comportamiento de los bots cambia — la lista sigue marcada como perecedera en la aplicación.
 
 ## Historial / Changelog
+
+### 1.3.8 — 2026-10-23
+
+- Objetivos táctiles de al menos 44 px en dispositivos táctiles (`pointer:coarse`); el escritorio no cambia.
 
 ### 1.3.7 — 2026-10-23
 
