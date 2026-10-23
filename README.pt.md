@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 1.3.7 · **Última atualização:** 2026-10-23
+**Versão:** 1.3.9 · **Última atualização:** 2026-10-23
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,14 @@ O SEOptimum é uma oficina SEO num único ficheiro com 20 ferramentas (analisado
 - A lista de bots de IA da ficha de referência (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, etc.) foi reverificada face a guias públicos de 2026 (p. ex. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); os nomes coincidem, mas o comportamento dos bots muda — a lista continua assinalada como perecível na aplicação.
 
 ## Histórico / Changelog
+
+### 1.3.9 — 2026-10-23
+
+- Os campos de formulário têm rótulos associados por código (`for`/`aria-labelledby`) em vez de dependerem só de `placeholder`.
+
+### 1.3.8 — 2026-10-23
+
+- Alvos de toque de pelo menos 44 px em dispositivos táteis (`pointer:coarse`); o computador não muda.
 
 ### 1.3.7 — 2026-10-23
 

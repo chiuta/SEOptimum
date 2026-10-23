@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 1.3.7 · **Zuletzt aktualisiert:** 2026-10-23
+**Version:** 1.3.9 · **Zuletzt aktualisiert:** 2026-10-23
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -73,6 +73,14 @@ SEOptimum ist eine SEO-Werkstatt in einer einzigen Datei mit 20 Werkzeugen (On-P
 - Die Liste der KI-Bots im Referenzblatt (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended usw.) wurde anhand öffentlicher Leitfäden von 2026 erneut geprüft (z. B. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); die Namen stimmen überein, aber das Verhalten der Bots ändert sich — die Liste bleibt in der App als vergänglich gekennzeichnet.
 
 ## Verlauf / Changelog
+
+### 1.3.9 — 2026-10-23
+
+- Formularfelder haben programmatisch zugeordnete Beschriftungen (`for`/`aria-labelledby`) statt sich nur auf `placeholder` zu stützen.
+
+### 1.3.8 — 2026-10-23
+
+- Touch-Ziele von mindestens 44 px auf Touch-Geräten (`pointer:coarse`); der Desktop bleibt unverändert.
 
 ### 1.3.7 — 2026-10-23
 
