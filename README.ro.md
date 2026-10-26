@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.3.10 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -27,6 +27,7 @@ Meniul conține 20 de unelte, grupate astfel:
 - **Reference:** listă de verificare SEO (export Markdown) și fișă de referință.
 - **Verificare rapidă a datelor structurate:** în analizorul on-page, fiecare bloc JSON-LD găsit are butonul „Verifică câmpurile obligatorii în unealta Schema →”, care îl trimite în fila Validate și rulează validarea.
 - **Scurtătură de tastatură:** `Ctrl/Cmd+Enter` într-un câmp text apasă butonul principal cel mai apropiat (Analyze, Generate, Check etc.).
+- **Plan de acțiune (2.0):** sub analiza on-page apare lista corectărilor ordonate după impactul estimat, apoi după efort (impactul și efortul sunt estimări orientative, nu garanții de clasare). „Salvează ca referință”, modifică pagina, analiz-o din nou: vezi ce s-a rezolvat, ce a apărut și cum s-au schimbat indicatorii. Instantaneul se poate descărca/încărca (`.json`).
 - Export raport on-page (`on-page-report.md`) și tipărire.
 
 ## Manual de utilizare
@@ -73,6 +74,9 @@ SEOptimum este un atelier SEO într-un singur fișier cu 20 de instrumente (anal
 - Lista de boți AI din fișa de referință (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended etc.) reverificată față de ghiduri publice din 2026 (de ex. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); numele coincid, dar comportamentul boților se schimbă — lista rămâne marcată ca perisabilă în aplicație.
 
 ## Istoric / Changelog
+
+### 2.0.0 — 2026-10-26
+- Plan de acțiune ordonat după impact și comparare între două versiuni ale paginii (referință salvată local sau instantaneu JSON). Teste noi în `tests/audit.test.mjs`.
 
 ### 1.3.9 — 2026-10-23
 

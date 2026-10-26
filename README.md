@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.3.10 · **Last updated:** 2026-10-26
+**Version:** 2.0.0 · **Last updated:** 2026-10-26
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -27,6 +27,7 @@ The menu contains 20 tools, grouped as follows:
 - **Reference:** SEO checklist (Markdown export) and reference sheet.
 - **Quick structured-data check:** in the on-page analyzer, every JSON-LD block found has the button "Check required fields in the Schema tool →", which sends it to the Validate tab and runs the validation.
 - **Keyboard shortcut:** `Ctrl/Cmd+Enter` in a text field presses the nearest main button (Analyze, Generate, Check, etc.).
+- **Action plan (2.0):** below the on-page analysis, fixes are listed by estimated impact, then effort (rule-of-thumb estimates, not ranking guarantees). Save a baseline, change the page, analyze again: see what was fixed, what is new and how the metrics moved. Snapshots can be downloaded/loaded as `.json`.
 - On-page report export (`on-page-report.md`) and printing.
 
 ## User guide
@@ -73,6 +74,9 @@ SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/s
 - The list of AI bots in the reference sheet (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, etc.) was re-checked against public guides from 2026 (e.g. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); the names match, but the bots' behaviour changes — the list remains marked as perishable in the app.
 
 ## History / Changelog
+
+### 2.0.0 — 2026-10-26
+- Impact-ordered action plan and comparison between two versions of a page (locally saved baseline or JSON snapshot).
 
 ### 1.3.9 — 2026-10-23
 
