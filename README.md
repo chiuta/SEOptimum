@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.1.0 · **Last updated:** 2026-10-27
+**Version:** 2.2.0 · **Last updated:** 2026-10-27
 
 **Status:** stable · **Offline:** complete; "Try fetch" needs internet and the target site's CORS consent
 
@@ -82,7 +82,19 @@ SEOptimum is a single-file SEO workbench with 21 tools (on-page analyzer, SERP/s
 - **Structured-data check:** already existed (Schema / JSON-LD tool, Validate tab, reachable from the on-page analyzer).
 - **Not implemented:** actually measuring Core Web Vitals (needs real visits or a lab browser, not possible offline from HTML), and direct analysis of external pages that block CORS (would need an intermediary server — against the "no server" principle).
 
+## 2.2.0: static CLS/LCP hints in the on-page analyzer (2026-10-27)
+
+- The "Performance heuristics" card of the on-page analyzer now also reports, from the pasted HTML only: `<img>` elements **without `width`/`height`** (or `aspect-ratio`/`width`+`height` in `style`) as a layout-shift (CLS) risk; **the first `<img>` using `loading="lazy"`** (if it is the largest visible element, lazy loading delays LCP — the first image in the markup is not necessarily the LCP element); and, as information, the absence of `fetchpriority="high"` or `<link rel="preload" as="image">`. Images inside `<noscript>` are ignored. Texts in 8 languages (fr/it/es/pt/hu/de: machine translation).
+- These are **static markup heuristics; nothing is measured**. Real LCP/INP/CLS still need PageSpeed Insights / Search Console / Lighthouse. The existing Core Web Vitals tool (explanations and thresholds) is unchanged.
+- JSON-LD / structured data: the Schema / JSON-LD tool (12 types, build and validate) already existed; nothing new was added in this round.
+- **Still not implemented:** measuring Core Web Vitals; analysing external pages that block CORS.
+- Tests: `tests/perf-static.test.mjs` (15 checks), `tests/audit.test.mjs` (46 checks) pass.
+
 ## History / Changelog
+
+### 2.2.0 — 2026-10-27 (previous: 2.1.0)
+
+Static CLS/LCP hints (images without dimensions, lazy first image, LCP hint) in the on-page analyzer; nothing is measured.
 
 ### 2.1.0 — 2026-10-27 (previous: 2.0.0)
 
