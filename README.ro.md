@@ -2,11 +2,13 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet; „Try fetch” cere internet și acordul CORS al site-ului țintă
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
-Atelier SEO într-un singur fișier HTML: douăzeci de unelte care rulează în browser.
+Atelier SEO într-un singur fișier HTML: douăzeci și una de unelte care rulează în browser.
 
 **Live:** https://chiuta.github.io/SEOptimum/
 
@@ -18,10 +20,10 @@ SEOptimum („offline SEO workbench”) reunește unelte pentru audit on-page, d
 
 ## Funcții
 
-Meniul conține 20 de unelte, grupate astfel:
+Meniul conține 21 de unelte, grupate astfel:
 
 - **Content & on-page:** analizor on-page (titlu, headinguri, imagini, linkuri, meta, date structurate, cuvânt-cheie țintă), previzualizare SERP și social (Google desktop/mobil, Facebook/LinkedIn, X/Twitter), generator de meta-taguri, Schema / JSON-LD (construire și validare, previzualizare rich result), cercetare de cuvinte-cheie (densitate și n-grame, clustering, intenție și long-tail, canibalizare), lizibilitate (șase formule, verificare pentru featured snippet), verificator de conținut duplicat, comparare de competitori.
-- **Technical:** fișiere tehnice (robots.txt, sitemap.xml, redirecturi, hreflang, llms.txt și alte fișiere generate în aplicație), analizor de loguri, structură internă și adâncime de click, audit de site, optimizator de slug-uri.
+- **Technical:** fișiere tehnice (robots.txt, sitemap.xml, redirecturi, hreflang, llms.txt și alte fișiere generate în aplicație), analizor de loguri, structură internă și adâncime de click, audit de site, optimizator de slug-uri, verificare Core Web Vitals (încadrează valorile introduse; nu măsoară nimic).
 - **Off-page & local:** analizor de anchor text, verificator de consistență NAP.
 - **Utilities:** constructor UTM, verificator de contrast WCAG 2.2, validator GTIN / cod de bare (UPC-A, EAN-8, EAN-13, GTIN-14).
 - **Reference:** listă de verificare SEO (export Markdown) și fișă de referință.
@@ -67,13 +69,24 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## Rezumat
 
-SEOptimum este un atelier SEO într-un singur fișier cu 20 de instrumente (analizor on-page, previzualizare SERP/social, generatoare de meta și JSON-LD, cercetare de cuvinte-cheie, lizibilitate, robots/sitemap/hreflang/llms.txt, analizor de loguri, audit de site, constructor UTM, contrast WCAG, validator GTIN, listă de verificare). Interfață în engleză/română. Analiza rulează local; rețeaua se folosește doar pentru butonul opțional „Try fetch” și pentru previzualizările og:image la distanță. Preferințele se stochează în localStorage (chei `seoFF.`).
+SEOptimum este un atelier SEO într-un singur fișier cu 21 de instrumente (analizor on-page, previzualizare SERP/social, generatoare de meta și JSON-LD, cercetare de cuvinte-cheie, lizibilitate, robots/sitemap/hreflang/llms.txt, analizor de loguri, audit de site, constructor UTM, contrast WCAG, validator GTIN, listă de verificare). Interfață în engleză/română. Analiza rulează local; rețeaua se folosește doar pentru butonul opțional „Try fetch” și pentru previzualizările og:image la distanță. Preferințele se stochează în localStorage (chei `seoFF.`).
 
 ## Surse verificate la 11.10.2026
 
 - Lista de boți AI din fișa de referință (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended etc.) reverificată față de ghiduri publice din 2026 (de ex. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); numele coincid, dar comportamentul boților se schimbă — lista rămâne marcată ca perisabilă în aplicație.
 
+## Noutăți 2.1.0, limite și ce nu este implementat (2026-10-27)
+
+- **Limita CORS, spusă explicit în aplicație:** pe ecranul Acasă există acum o notă: aplicația nu parcurge și nu descarcă singură alte site-uri; „Try fetch” funcționează doar dacă celălalt site permite cereri cross-origin (CORS) — majoritatea nu o fac — iar varianta obișnuită este lipirea sursei HTML. Nota există în română și engleză (celelalte limbi o afișează în engleză).
+- **Instrument nou: Core Web Vitals (al 21-lea).** Introduci LCP, INP și CLS măsurate în altă parte (PageSpeed Insights, Search Console, Lighthouse/DevTools); instrumentul le încadrează în „bun / de îmbunătățit / slab” după pragurile publicate (LCP ≤ 2,5 s și > 4 s; INP ≤ 200 ms și > 500 ms; CLS ≤ 0,1 și > 0,25, verificate la 2026-10-27 pe surse publice; Google le poate modifica) și explică ce măsoară fiecare, cauzele frecvente și remediile uzuale. **Nu măsoară nimic** și nu poate calcula aceste valori din HTML lipit. Textele noi sunt doar în română și engleză.
+- **Verificare de date structurate:** exista deja (instrumentul Schema / JSON-LD, fila Validare, cu trimitere din analizorul on-page).
+- **Nu implementat:** măsurarea efectivă a Core Web Vitals (cere vizite reale sau un browser de laborator, nu e posibilă offline din HTML), analiza directă a paginilor externe fără CORS (ar cere un server intermediar — contrar principiului „fără server”).
+
 ## Istoric / Changelog
+
+### 2.1.0 — 2026-10-27 (anterior: 2.0.0)
+
+Instrument nou „Core Web Vitals” (explicativ, nu măsoară); notă CORS pe Acasă; 21 de instrumente.
 
 ### 2.0.0 — 2026-10-26
 - Plan de acțiune ordonat după impact și comparare între două versiuni ale paginii (referință salvată local sau instantaneu JSON). Teste noi în `tests/audit.test.mjs`.

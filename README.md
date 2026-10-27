@@ -2,11 +2,13 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.1.0 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete; "Try fetch" needs internet and the target site's CORS consent
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
-An SEO workshop in a single HTML file: twenty tools that run in the browser.
+An SEO workshop in a single HTML file: twenty-one tools that run in the browser.
 
 **Live app:** https://chiuta.github.io/SEOptimum/
 
@@ -18,10 +20,10 @@ SEOptimum ("offline SEO workbench") brings together tools for on-page auditing, 
 
 ## Features
 
-The menu contains 20 tools, grouped as follows:
+The menu contains 21 tools, grouped as follows:
 
 - **Content & on-page:** on-page analyzer (title, headings, images, links, meta, structured data, target keyword), SERP and social preview (Google desktop/mobile, Facebook/LinkedIn, X/Twitter), meta tag generator, Schema / JSON-LD (building and validation, rich result preview), keyword research (density and n-grams, clustering, intent and long-tail, cannibalization), readability (six formulas, featured snippet check), duplicate content checker, competitor comparison.
-- **Technical:** technical files (robots.txt, sitemap.xml, redirects, hreflang, llms.txt and other files generated in the app), log analyzer, internal structure and click depth, site audit, slug optimizer.
+- **Technical:** technical files (robots.txt, sitemap.xml, redirects, hreflang, llms.txt and other files generated in the app), log analyzer, internal structure and click depth, site audit, slug optimizer, Core Web Vitals check (rates values you type in; measures nothing).
 - **Off-page & local:** anchor text analyzer, NAP consistency checker.
 - **Utilities:** UTM builder, WCAG 2.2 contrast checker, GTIN / barcode validator (UPC-A, EAN-8, EAN-13, GTIN-14).
 - **Reference:** SEO checklist (Markdown export) and reference sheet.
@@ -67,13 +69,24 @@ Alexio — Alexandru-Ionuț Chiuță, contact: alexio@trom.tf
 
 ## Summary
 
-SEOptimum is a single-file SEO workbench with 20 tools (on-page analyzer, SERP/social preview, meta and JSON-LD generators, keyword research, readability, robots/sitemap/hreflang/llms.txt, log analyzer, site audit, UTM builder, WCAG contrast, GTIN validator, checklist). English/Romanian UI. Analysis runs locally; the network is used only for the optional "Try fetch" button and remote og:image previews. Preferences are stored in localStorage (`seoFF.` keys).
+SEOptimum is a single-file SEO workbench with 21 tools (on-page analyzer, SERP/social preview, meta and JSON-LD generators, keyword research, readability, robots/sitemap/hreflang/llms.txt, log analyzer, site audit, UTM builder, WCAG contrast, GTIN validator, checklist). English/Romanian UI. Analysis runs locally; the network is used only for the optional "Try fetch" button and remote og:image previews. Preferences are stored in localStorage (`seoFF.` keys).
 
 ## Sources verified on 11.10.2026
 
 - The list of AI bots in the reference sheet (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, Claude-User, PerplexityBot, Google-Extended, etc.) was re-checked against public guides from 2026 (e.g. searchenginejournal.com/ai-crawler-user-agents-list, anagram.ai/blog/ai-crawler-user-agent-list-2026-14-bots-and-robotstxt-tokens-to-know); the names match, but the bots' behaviour changes — the list remains marked as perishable in the app.
 
+## News in 2.1.0, limits and what is not implemented (2026-10-27)
+
+- **The CORS limit, stated explicitly in the app:** the Home screen now has a note: the app does not crawl or download other sites by itself; "Try fetch" works only if the other site allows cross-origin (CORS) requests — most do not — and the usual route is pasting the HTML source. The note exists in Romanian and English (other languages show it in English).
+- **New tool: Core Web Vitals (the 21st).** You enter LCP, INP and CLS measured elsewhere (PageSpeed Insights, Search Console, Lighthouse/DevTools); the tool rates them "good / needs improvement / poor" using the published thresholds (LCP ≤ 2.5 s and > 4 s; INP ≤ 200 ms and > 500 ms; CLS ≤ 0.1 and > 0.25, checked on 2026-10-27 against public sources; Google may change them) and explains what each measures, common causes and typical fixes. It **measures nothing** and cannot compute these values from pasted HTML. The new texts are in Romanian and English only.
+- **Structured-data check:** already existed (Schema / JSON-LD tool, Validate tab, reachable from the on-page analyzer).
+- **Not implemented:** actually measuring Core Web Vitals (needs real visits or a lab browser, not possible offline from HTML), and direct analysis of external pages that block CORS (would need an intermediary server — against the "no server" principle).
+
 ## History / Changelog
+
+### 2.1.0 — 2026-10-27 (previous: 2.0.0)
+
+New "Core Web Vitals" tool (explanatory, measures nothing); CORS note on Home; 21 tools.
 
 ### 2.0.0 — 2026-10-26
 - Impact-ordered action plan and comparison between two versions of a page (locally saved baseline or JSON snapshot).
