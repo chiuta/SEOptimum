@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.1.0 · **Ultima actualizare:** 2026-10-27
+**Versiune:** 2.2.0 · **Ultima actualizare:** 2026-10-27
 
 **Stare:** stabil · **Offline:** complet; „Try fetch” cere internet și acordul CORS al site-ului țintă
 
@@ -82,7 +82,19 @@ SEOptimum este un atelier SEO într-un singur fișier cu 21 de instrumente (anal
 - **Verificare de date structurate:** exista deja (instrumentul Schema / JSON-LD, fila Validare, cu trimitere din analizorul on-page).
 - **Nu implementat:** măsurarea efectivă a Core Web Vitals (cere vizite reale sau un browser de laborator, nu e posibilă offline din HTML), analiza directă a paginilor externe fără CORS (ar cere un server intermediar — contrar principiului „fără server”).
 
+## 2.2.0: indicii statice CLS/LCP în analizorul on-page (2026-10-27)
+
+- Cardul „Euristici de performanță” din analizorul on-page raportează acum, doar din HTML-ul lipit: elemente `<img>` **fără `width`/`height`** (sau `aspect-ratio`/`width`+`height` în `style`) ca risc de deplasare a aspectului (CLS); **primul `<img>` cu `loading="lazy"`** (dacă este cel mai mare element vizibil, încărcarea leneșă întârzie LCP — prima imagine din markup nu este neapărat elementul LCP); și, ca informație, lipsa `fetchpriority="high"` sau `<link rel="preload" as="image">`. Imaginile din `<noscript>` sunt ignorate. Texte în 8 limbi (fr/it/es/pt/hu/de: traducere automată).
+- Sunt **euristici statice de markup; nu se măsoară nimic**. LCP/INP/CLS reale cer în continuare PageSpeed Insights / Search Console / Lighthouse. Instrumentul Core Web Vitals existent (explicații și praguri) nu s-a schimbat.
+- JSON-LD / date structurate: instrumentul Schema / JSON-LD (12 tipuri, construire și validare) exista deja; nu s-a adăugat nimic nou în această rundă.
+- **Rămân neimplementate:** măsurarea Core Web Vitals; analiza paginilor externe care blochează CORS.
+- Teste: `tests/perf-static.test.mjs` (15 verificări), `tests/audit.test.mjs` (46 de verificări) trec.
+
 ## Istoric / Changelog
+
+### 2.2.0 — 2026-10-27 (anterior: 2.1.0)
+
+Indicii statice CLS/LCP (imagini fără dimensiuni, prima imagine lazy, indiciu LCP) în analizorul on-page; nu se măsoară nimic.
 
 ### 2.1.0 — 2026-10-27 (anterior: 2.0.0)
 
