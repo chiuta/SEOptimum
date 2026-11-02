@@ -1,5 +1,9 @@
 # Jurnal de modificări — SEOptimum
 
+## 2.2.1 — 2026-11-02 (anterior: 2.2.0)
+
+- Sursă actualizată (2026-11-02): nota Google pentru FAQPage — din 7 mai 2026 Google nu mai afișează rezultate îmbogățite FAQ pentru niciun site (în 8 limbi).
+
 ## 2.2.0 — 2026-10-27 (anterior: 2.1.0)
 
 - Nou în „Euristici de performanță” (on-page): `<img>` fără width/height (risc CLS), prima imagine cu loading="lazy" (risc LCP), lipsa fetchpriority/preload pentru imaginea principală (informativ). Euristici statice de markup, nu măsurători. Texte în 8 limbi (fr/it/es/pt/hu/de: traducere automată).
