@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 2.2.5 · **Última atualização:** 2026-11-08
+**Versão:** 2.2.6 · **Última atualização:** 2026-11-08
 
 Idiomas da interface: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -18,7 +18,7 @@ O SEOptimum («offline SEO workbench») reúne ferramentas para auditoria on-pag
 
 ## Funcionalidades
 
-O menu contém 20 ferramentas, agrupadas assim:
+O menu contém 21 ferramentas, agrupadas assim:
 
 - **Content & on-page:** analisador on-page (título, cabeçalhos, imagens, ligações, meta, dados estruturados, palavra-chave alvo), pré-visualização SERP e social (Google computador/telemóvel, Facebook/LinkedIn, X/Twitter), gerador de metaetiquetas, Schema / JSON-LD (construção e validação, pré-visualização do resultado enriquecido), pesquisa de palavras-chave (densidade e n-gramas, clustering, intenção e cauda longa, canibalização), legibilidade (seis fórmulas, verificação para o featured snippet), verificador de conteúdo duplicado, comparação de concorrentes.
 - **Technical:** ficheiros técnicos (robots.txt, sitemap.xml, redirecionamentos, hreflang, llms.txt e outros ficheiros gerados na aplicação), analisador de logs, estrutura interna e profundidade de cliques, auditoria do sítio, otimizador de slugs.
@@ -66,7 +66,7 @@ Alexio — Alexandru-Ionuț Chiuță, contacto: alexio@trom.tf
 
 ## Resumo
 
-O SEOptimum é uma oficina SEO num único ficheiro com 20 ferramentas (analisador on-page, pré-visualização SERP/social, geradores de meta e JSON-LD, pesquisa de palavras-chave, legibilidade, robots/sitemap/hreflang/llms.txt, analisador de logs, auditoria do sítio, construtor de UTM, contraste WCAG, validador de GTIN, lista de verificação). Interface em inglês/romeno. A análise corre localmente; a rede só é usada para o botão opcional «Try fetch» e para as pré-visualizações remotas de og:image. As preferências são guardadas em localStorage (chaves `seoFF.`).
+O SEOptimum é uma oficina SEO num único ficheiro com 21 ferramentas (analisador on-page, pré-visualização SERP/social, geradores de meta e JSON-LD, pesquisa de palavras-chave, legibilidade, robots/sitemap/hreflang/llms.txt, analisador de logs, auditoria do sítio, construtor de UTM, contraste WCAG, validador de GTIN, lista de verificação). Interface em inglês/romeno. A análise corre localmente; a rede só é usada para o botão opcional «Try fetch» e para as pré-visualizações remotas de og:image. As preferências são guardadas em localStorage (chaves `seoFF.`).
 
 ## Fontes verificadas em 11.10.2026
 

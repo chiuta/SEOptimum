@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 2.2.5 · **Ultimo aggiornamento:** 2026-11-08
+**Versione:** 2.2.6 · **Ultimo aggiornamento:** 2026-11-08
 
 Lingue dell'interfaccia: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -18,7 +18,7 @@ SEOptimum («offline SEO workbench») riunisce strumenti per l'audit on-page, i 
 
 ## Funzioni
 
-Il menu contiene 20 strumenti, raggruppati così:
+Il menu contiene 21 strumenti, raggruppati così:
 
 - **Content & on-page:** analizzatore on-page (titolo, intestazioni, immagini, link, meta, dati strutturati, parola chiave target), anteprima SERP e social (Google desktop/mobile, Facebook/LinkedIn, X/Twitter), generatore di meta tag, Schema / JSON-LD (costruzione e validazione, anteprima del rich result), ricerca di parole chiave (densità e n-grammi, clustering, intento e long tail, cannibalizzazione), leggibilità (sei formule, verifica per il featured snippet), verifica dei contenuti duplicati, confronto tra concorrenti.
 - **Technical:** file tecnici (robots.txt, sitemap.xml, redirect, hreflang, llms.txt e altri file generati nell'app), analizzatore di log, struttura interna e profondità di clic, audit del sito, ottimizzatore di slug.
@@ -66,7 +66,7 @@ Alexio — Alexandru-Ionuț Chiuță, contatto: alexio@trom.tf
 
 ## Riepilogo
 
-SEOptimum è un laboratorio SEO in un unico file con 20 strumenti (analizzatore on-page, anteprima SERP/social, generatori di meta e JSON-LD, ricerca di parole chiave, leggibilità, robots/sitemap/hreflang/llms.txt, analizzatore di log, audit del sito, costruttore UTM, contrasto WCAG, validatore GTIN, checklist). Interfaccia in inglese/rumeno. L'analisi avviene in locale; la rete è usata solo per il pulsante facoltativo «Try fetch» e per le anteprime og:image remote. Le preferenze sono memorizzate in localStorage (chiavi `seoFF.`).
+SEOptimum è un laboratorio SEO in un unico file con 21 strumenti (analizzatore on-page, anteprima SERP/social, generatori di meta e JSON-LD, ricerca di parole chiave, leggibilità, robots/sitemap/hreflang/llms.txt, analizzatore di log, audit del sito, costruttore UTM, contrasto WCAG, validatore GTIN, checklist). Interfaccia in inglese/rumeno. L'analisi avviene in locale; la rete è usata solo per il pulsante facoltativo «Try fetch» e per le anteprime og:image remote. Le preferenze sono memorizzate in localStorage (chiavi `seoFF.`).
 
 ## Fonti verificate l'11.10.2026
 

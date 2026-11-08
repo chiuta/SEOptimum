@@ -1,5 +1,8 @@
 # Jurnal de modificări — SEOptimum
 
+## 2.2.6 — 2026-11-08
+Doar documentare: README în de/es/fr/hu/it/pt spune 21 de instrumente (în loc de 20), ca în EN/RO și în aplicație.
+
 ## 2.2.3 — 2026-11-03
 
 Destinații «Trimite către…» pentru pașaportul de învățare: adăugate FENARIUM și MENSURA (registrul de aplicații-țintă reinjectat din hub).

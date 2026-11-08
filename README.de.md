@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 2.2.5 · **Zuletzt aktualisiert:** 2026-11-08
+**Version:** 2.2.6 · **Zuletzt aktualisiert:** 2026-11-08
 
 Oberflächensprachen: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -18,7 +18,7 @@ SEOptimum („offline SEO workbench“) vereint Werkzeuge für On-Page-Audits, s
 
 ## Funktionen
 
-Das Menü enthält 20 Werkzeuge, wie folgt gruppiert:
+Das Menü enthält 21 Werkzeuge, wie folgt gruppiert:
 
 - **Content & on-page:** On-Page-Analysator (Titel, Überschriften, Bilder, Links, Meta, strukturierte Daten, Ziel-Keyword), SERP- und Social-Vorschau (Google Desktop/Mobil, Facebook/LinkedIn, X/Twitter), Meta-Tag-Generator, Schema / JSON-LD (Erstellung und Validierung, Rich-Result-Vorschau), Keyword-Recherche (Dichte und N-Gramme, Clustering, Intention und Long-Tail, Kannibalisierung), Lesbarkeit (sechs Formeln, Prüfung auf Featured Snippet), Prüfer für doppelte Inhalte, Wettbewerbervergleich.
 - **Technical:** technische Dateien (robots.txt, sitemap.xml, Weiterleitungen, hreflang, llms.txt und weitere in der App erzeugte Dateien), Log-Analysator, interne Struktur und Klicktiefe, Website-Audit, Slug-Optimierer.
@@ -66,7 +66,7 @@ Alexio — Alexandru-Ionuț Chiuță, Kontakt: alexio@trom.tf
 
 ## Zusammenfassung
 
-SEOptimum ist eine SEO-Werkstatt in einer einzigen Datei mit 20 Werkzeugen (On-Page-Analysator, SERP-/Social-Vorschau, Meta- und JSON-LD-Generatoren, Keyword-Recherche, Lesbarkeit, robots/sitemap/hreflang/llms.txt, Log-Analysator, Website-Audit, UTM-Builder, WCAG-Kontrast, GTIN-Validator, Checkliste). Oberfläche auf Englisch/Rumänisch. Die Analyse läuft lokal; das Netzwerk wird nur für die optionale Schaltfläche „Try fetch“ und für entfernte og:image-Vorschauen verwendet. Einstellungen werden in localStorage gespeichert (Schlüssel `seoFF.`).
+SEOptimum ist eine SEO-Werkstatt in einer einzigen Datei mit 21 Werkzeugen (On-Page-Analysator, SERP-/Social-Vorschau, Meta- und JSON-LD-Generatoren, Keyword-Recherche, Lesbarkeit, robots/sitemap/hreflang/llms.txt, Log-Analysator, Website-Audit, UTM-Builder, WCAG-Kontrast, GTIN-Validator, Checkliste). Oberfläche auf Englisch/Rumänisch. Die Analyse läuft lokal; das Netzwerk wird nur für die optionale Schaltfläche „Try fetch“ und für entfernte og:image-Vorschauen verwendet. Einstellungen werden in localStorage gespeichert (Schlüssel `seoFF.`).
 
 ## Am 11.10.2026 geprüfte Quellen
 

@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.2.5 · **Dernière mise à jour :** 2026-11-08
+**Version :** 2.2.6 · **Dernière mise à jour :** 2026-11-08
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -18,7 +18,7 @@ SEOptimum (« offline SEO workbench ») réunit des outils pour l'audit on-page,
 
 ## Fonctions
 
-Le menu contient 20 outils, regroupés ainsi :
+Le menu contient 21 outils, regroupés ainsi :
 
 - **Content & on-page :** analyseur on-page (titre, intertitres, images, liens, méta, données structurées, mot-clé cible), aperçu SERP et réseaux sociaux (Google ordinateur/mobile, Facebook/LinkedIn, X/Twitter), générateur de balises méta, Schema / JSON-LD (construction et validation, aperçu du résultat enrichi), recherche de mots-clés (densité et n-grammes, clustering, intention et longue traîne, cannibalisation), lisibilité (six formules, vérification pour le featured snippet), vérificateur de contenu dupliqué, comparaison de concurrents.
 - **Technical :** fichiers techniques (robots.txt, sitemap.xml, redirections, hreflang, llms.txt et autres fichiers générés dans l'application), analyseur de logs, structure interne et profondeur de clic, audit de site, optimiseur de slugs.
@@ -66,7 +66,7 @@ Alexio — Alexandru-Ionuț Chiuță, contact : alexio@trom.tf
 
 ## Résumé
 
-SEOptimum est un atelier SEO dans un seul fichier avec 20 outils (analyseur on-page, aperçu SERP/réseaux sociaux, générateurs de méta et de JSON-LD, recherche de mots-clés, lisibilité, robots/sitemap/hreflang/llms.txt, analyseur de logs, audit de site, constructeur UTM, contraste WCAG, validateur GTIN, checklist). Interface en anglais/roumain. L'analyse s'exécute localement ; le réseau n'est utilisé que pour le bouton facultatif « Try fetch » et les aperçus og:image distants. Les préférences sont stockées dans localStorage (clés `seoFF.`).
+SEOptimum est un atelier SEO dans un seul fichier avec 21 outils (analyseur on-page, aperçu SERP/réseaux sociaux, générateurs de méta et de JSON-LD, recherche de mots-clés, lisibilité, robots/sitemap/hreflang/llms.txt, analyseur de logs, audit de site, constructeur UTM, contraste WCAG, validateur GTIN, checklist). Interface en anglais/roumain. L'analyse s'exécute localement ; le réseau n'est utilisé que pour le bouton facultatif « Try fetch » et les aperçus og:image distants. Les préférences sont stockées dans localStorage (clés `seoFF.`).
 
 ## Sources vérifiées le 11.10.2026
 

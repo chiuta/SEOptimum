@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.2.5 · **Utolsó frissítés:** 2026-11-08
+**Verzió:** 2.2.6 · **Utolsó frissítés:** 2026-11-08
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -18,7 +18,7 @@ A SEOptimum („offline SEO workbench”) eszközöket fog össze az on-page aud
 
 ## Funkciók
 
-A menü 20 eszközt tartalmaz, a következő csoportosításban:
+A menü 21 eszközt tartalmaz, a következő csoportosításban:
 
 - **Content & on-page:** on-page elemző (cím, címsorok, képek, hivatkozások, meta, strukturált adatok, célkulcsszó), SERP- és közösségi előnézet (Google asztali/mobil, Facebook/LinkedIn, X/Twitter), metacímke-generátor, Schema / JSON-LD (összeállítás és validálás, rich result előnézet), kulcsszókutatás (sűrűség és n-gramok, klaszterezés, szándék és long tail, kannibalizáció), olvashatóság (hat képlet, featured snippet ellenőrzés), duplikált tartalom ellenőrző, versenytárs-összehasonlítás.
 - **Technical:** technikai fájlok (robots.txt, sitemap.xml, átirányítások, hreflang, llms.txt és más, az alkalmazásban generált fájlok), naplóelemző, belső struktúra és kattintási mélység, webhelyaudit, slug-optimalizáló.
@@ -66,7 +66,7 @@ Alexio — Alexandru-Ionuț Chiuță, kapcsolat: alexio@trom.tf
 
 ## Összefoglaló
 
-A SEOptimum egyetlen fájlból álló SEO-műhely 20 eszközzel (on-page elemző, SERP-/közösségi előnézet, meta- és JSON-LD-generátorok, kulcsszókutatás, olvashatóság, robots/sitemap/hreflang/llms.txt, naplóelemző, webhelyaudit, UTM-építő, WCAG-kontraszt, GTIN-validátor, ellenőrzőlista). Angol/román felület. Az elemzés helyben fut; a hálózatot csak az opcionális „Try fetch” gomb és a távoli og:image előnézetek használják. A beállítások a localStorage-ban vannak tárolva (`seoFF.` kulcsok).
+A SEOptimum egyetlen fájlból álló SEO-műhely 21 eszközzel (on-page elemző, SERP-/közösségi előnézet, meta- és JSON-LD-generátorok, kulcsszókutatás, olvashatóság, robots/sitemap/hreflang/llms.txt, naplóelemző, webhelyaudit, UTM-építő, WCAG-kontraszt, GTIN-validátor, ellenőrzőlista). Angol/román felület. Az elemzés helyben fut; a hálózatot csak az opcionális „Try fetch” gomb és a távoli og:image előnézetek használják. A beállítások a localStorage-ban vannak tárolva (`seoFF.` kulcsok).
 
 ## 2026. 10. 11-én ellenőrzött források
 
