@@ -1,5 +1,9 @@
 # Jurnal de modificări — SEOptimum
 
+## 2.2.11 — 2026-11-15
+
+- Nou: texturi fractale hiper-detaliate (fff-texturi 1.1.2) — fundalul și suprafețele mari (carduri, panouri, antete, butoane; filele și dialogurile ascunse la încărcare, când se deschid) primesc un material generat local (WebGL2, fără rețea și fără imagini), care se repetă fără cusătură; culorile aplicației rămân ale ei. Se oprește din dialogul „Transparență” sau cu `?notex=1`.
+
 ## 2.2.6 — 2026-11-08
 Doar documentare: README în de/es/fr/hu/it/pt spune 21 de instrumente (în loc de 20), ca în EN/RO și în aplicație.
 
